@@ -1,0 +1,27 @@
+﻿<html>
+<head>
+<script language="JavaScript">
+  var items=0;
+  function AddForm1(){
+	div=document.getElementById("b_1");//Ищем контейнер div c id=b_1
+	span=document.getElementById("add");//Ищем контейнер span c id=add
+	items++;
+	newitem="<form>Жопа</form>";
+	newnode=document.createElement("span");
+	newnode.innerHTML=newitem;
+	div.insertBefore(newnode,button);
+  }
+</script>
+</head>
+<body>
+<form style="border:5px double black;">
+  Имя заказчика:<input name="MyName" size="35"><br>
+  Телефон:<input name="MyNumber" size="15"><br>
+  <div id="b_1"style="border:5px double black;">
+    Количество комплектов:<input name="numb" size="15">
+	<a href="#" style="text-decoration:none; color:white;" OnClick="AddForm1()"><span id="add" style="background-color:black; border:1px solid black; border-radius:5px; margin-left:5px; margin-bottom:5px; ">Генерировать комлекты</span></a>
+  </div>
+  <a href="#" style="text-decoration:none; color:white;"><span style="background-color:black; border:1px solid black; border-radius:5px; margin-left:5px; margin-bottom:5px; ">Отправить</span></a>
+</form>
+</body>
+</html>
